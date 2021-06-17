@@ -1,11 +1,10 @@
-{% extends 'base.html' %} {% block title %} | User Dashboard {% endblock %} {%
-block content %}
+{% extends 'base.html' %} {% block title %} | User Dashboard {% endblock %} {% block content %}
 <section id="showcase-inner" class="py-5 text-white">
   <div class="container">
     <div class="row text-center">
       <div class="col-md-12">
         <h1 class="display-4">User Dashboard</h1>
-        <p class="lead">Manage your BT Real Estate account</p>
+        <p class="lead">Manage your Zallow account</p>
       </div>
     </div>
   </div>
@@ -49,18 +48,14 @@ block content %}
               <td>{{ contact.id }}</td>
               <td>{{ contact.listing }}</td>
               <td>
-                <a
-                  class="btn btn-light"
-                  href="{% url 'listing' contact.listing_id %}"
-                  >View Listing</a
-                >
+                <a class="btn btn-light" href="{% url 'listing' contact.listing_id %}">View Listing</a>
               </td>
             </tr>
             {% endfor %}
           </tbody>
         </table>
         {% else %}
-        <p>You have not made any inquiries</p>
+        <p>You have not made any inquiries, so why wait any longer to make one?</p>
         {% endif %}
       </div>
     </div>
