@@ -1,0 +1,1 @@
+web: gunicorn zallow.wsgi --log-file -
